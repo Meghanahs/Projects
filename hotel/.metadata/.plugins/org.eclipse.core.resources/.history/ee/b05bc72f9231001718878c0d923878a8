@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/angular.js"></script>
+<script src="text/javascript">
+var app=angular.module("siddhrans",[]);
+app.controller("controller1",function($rootScope,$scope)
+		{
+		$scope.employee={"empid":01,"empname":"megha","empsal":5000};
+		
+		
+		$rootScope.message1="hi this is controller1";
+		)};
+		
+ app.controller("controller2",function($rootScope,$scope)
+		{
+				$scope.student={"stid":420,"stname":"Vishnu","stmarks":00};
+				$rootScope.message2="hi this is controller2";
+				)};
+</script>
+</head>
+<body>
+	<!-- <div ng-app="siddhrans">
+		{{message1}}<br>
+		{{message2}}<br>
+			<div ng-controller="controller1">
+				empId:{{employee.empid}}<br>
+				empName:{{employee.empname}}<br>
+				empSalary:{{employee.empsal}}<br>
+				{{message1}}<br>
+				{{message2}}<br>
+			</div>
+		<hr>
+			<div ng-controller="controller2">
+				studentId:{{student.stid}}
+				studentName:{{student.stname}}
+				studentMarks:{{student.stmarks}}
+				{{message1}}<br>
+				{{message2}}<br>
+			</div>
+		{{message1}}<br>
+		{{message2}}<br>
+	</div> -->
+</body>
+</html>

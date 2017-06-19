@@ -1,0 +1,15 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/angular.js"></script>
+</head>
+<body>
+ <div ng-app ng-init="x=20 y=30 z=x+y">
+ x value is {{x}}
+ y value is  {{y}}
+ z value is  {{z}}
+</div> 
+
+</body>
+</html>

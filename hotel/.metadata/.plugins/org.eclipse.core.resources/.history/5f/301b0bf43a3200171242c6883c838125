@@ -1,0 +1,50 @@
+!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/angular.js"></script>
+<script type="text/javascript">
+var app=angular.module("megha",[]);
+
+app.factory("myfactory",function()
+		{
+	this.add=add(a,b)
+	{
+	var c=parseInt(a)+parseInt(b);
+	return c;};
+	this.subtract=subtract(a,b)
+	{var c=a-b;
+	return c;};
+	});
+
+
+app controller=("myc",["$scope","myfactory",function($scope,myservice){ 
+	$scope.firstnum="";
+	$scope.secondnum="";
+	$scope.result="";
+	$scope.addition=function(){
+		$scope.result=myfactory.add($scope.firstnum,$scope.secondnum);
+	};
+	
+$scope.subtraction=function(){
+	$scope.result=myservice.subtract($scope.firstnum,$scope.secondnum);
+};
+	
+}]);
+
+
+</script>
+</head>
+<body>
+<div ng-app="megha" ng-controller="myc">
+Enter the first number:<input type="text" ng-model="firstnum"><br>
+Enter the second number:<input type="text" ng-model="secondnum"><br>
+<input type="button" value="add" on-click="addition()">
+<input type="button" value="subtract" on-click="subtraction()"><br>
+Result:<input type="text" ng-module="result" readonly="readonly">
+
+
+</div>
+</body>
+</html>

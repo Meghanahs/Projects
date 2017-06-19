@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/angular.js">
+</script>
+<script type="text/javascript">
+//module 
+var app=angular.module("siddhrans",[]);
+
+//controller 
+app.controller("hicontroller",function($scope)
+{
+$scope.employee={"empid":01,"empname":"Megha","sal":5000};
+$scope.student={"stid":10,"stname":"Ramya"};
+$scope.GetMysal=function()
+{ return (this.employee.sal)*12};
+});
+</script>
+</head>
+<body>
+
+<div ng-app="siddhrans" ng-controller="hicontroller">
+<table border="1">
+<caption>Employee</caption>
+<tr>
+<td>empId</td>
+<td>{{employee.empid}}</td>
+</tr>
+<tr>
+<td>empName</td>
+<td>{{employee.empname}}</td>
+</tr>
+<tr>
+<td>empSalary</td>
+<td>{{employee.sal}}</td>
+</tr>
+
+</table>
+<br>
+
+<table border="2">
+<caption>Students</caption>
+<tr>
+<td>studentId</td>
+<td>{{student.stid}}</td>
+</tr>
+<tr>
+<td>studentName</td>
+<td>{{student.stname}}</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>
